@@ -1,3 +1,11 @@
 nome: Claudia Maia
 idade: 34
 curso: MJV Java
+
+De DiegoJfsr - > 1° Pergunta: Qual livro você leu esse ano e que te chamou a atenção? 
+
+De DiegoJfsr - > 2° Pergunta: Qual e o seu influenciador digital ou canal de YT preferido?
+
+De Elisabete -> por que Java?
+
+De Elisabete -> Dentreo da tecnologia qual sua area preferida?
