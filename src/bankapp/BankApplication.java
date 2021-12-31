@@ -1,5 +1,10 @@
 package bankapp;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+
 import bankapp.model.Conta;
 import bankapp.repository.ContaRepository;
 import bankapp.service.ContaService;
@@ -9,8 +14,21 @@ public class BankApplication {
 
 	public static void main(String[] args) {
 		
-		caso2();
+		caso3();
 
+	}
+	
+	private static void caso3() {
+		List<String> nomes = new ArrayList();
+		nomes.add("Dom");
+		nomes.add("Bruna");
+		nomes.add("Juliana");
+		
+		Collections.sort(nomes);
+		
+		for(String nome: nomes) {
+			System.out.println(nome);
+		}
 	}
 	
 	private static void caso2() {
@@ -32,15 +50,14 @@ public class BankApplication {
 		contaMayara.setNumero("564-7");
 		repository.adicionarConta(contaMayara);
 		
-		Conta [] contas = repository.getContas();
+		Set <Conta> contas = repository.getContas();
 		
-		for(int i = 0; i < contas.length; i = i + 1) {
+		for(Conta conta : contas) {
 			
-			Conta contAtual = contas[i];
-			System.out.println(contAtual);
+			System.out.println(conta);
 		}
 		
-		System.out.println(contaTaty);
+		//System.out.println(contaTaty);
 		
 		ContaService terminal = new ContaService();
 		terminal.depositar(contaTaty, 100.0);
