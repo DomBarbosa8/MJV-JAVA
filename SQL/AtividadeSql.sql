@@ -49,7 +49,7 @@ values
 (default, 'Carol Trimm','trimm@gmail.com','21989770989','rua u', 41,'mills','meier','rj','',5000,10000, 0),
 (default, 'Esdras Indy', 'indy@gmail.com','11955486675','rua o',66,'lapa','sao paulo','sp','',1300,2000, 0);
 
--- Definição das porfissões individualmente, utilizando o id --
+-- Definição das profissões individualmente, utilizando o id --
 
 update tab_ficha_profissional set profissao = 'dev fullstack jr' where id = 1;
 update tab_ficha_profissional set profissao = 'dev jr' where id = 2;
@@ -92,14 +92,14 @@ where id = 3;
 /* DQL */
 
 -- Seleção ordenada por nome e profissão utilizando o select, from e order by  --
-/*select nome, email, profissao, salario_minimo, salario_maximo 
+select nome, email, profissao, salario_minimo, salario_maximo 
 from tab_ficha_profissional
-order by nome, profissao;*/
+order by nome, profissao;
 
 -- Seleção ordenada do maior salário máximo para o menor e profissão --
-/*select nome, email, profissao, salario_minimo, salario_maximo 
+select nome, email, profissao, salario_minimo, salario_maximo 
 from tab_ficha_profissional
-order by salario_maximo desc, profissao;*/
+order by salario_maximo desc, profissao;
 
 -- Selecionando e concatenando nome e profissão, usando o select e concat
 select concat(nome, ' - ',profissao) as nome_profissao from tab_ficha_profissional;
