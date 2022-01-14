@@ -1,4 +1,5 @@
-/* Criação da tabela utilizando o comando 'create table', uso do tipo 'varchar/char' para tipos caracteres
+/* DDL 
+Criação da tabela utilizando o comando 'create table', uso do tipo 'varchar/char' para tipos caracteres
 tipo 'int' para números, tipo 'decimal' para salario e tipo 'bit' para boolean. */
 
 create table tab_ficha_profissional(
@@ -16,3 +17,27 @@ salario_maximo decimal (15, 2) not null,
 estrangeiro bit not null,
 primary key(id)
 );
+
+/* alteração da tabela com 'alter table' e 'add' utilizando 'after' para designar posição da nova coluna*/
+alter table tab_ficha_profissional add profissao varchar (30) not null after estado;
+
+/* alteração do comprimento do varchar para a coluna email*/
+alter table tab_ficha_profissional modify column email varchar(100) not null; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
